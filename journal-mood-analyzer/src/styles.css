@@ -1,0 +1,122 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+  background: linear-gradient(135deg, #e0e7ff 0%, #f0fdfa 100%), url('https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1500&q=80');
+  background-size: cover, cover;
+  background-blend-mode: lighten;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+main {
+  max-width: 700px;
+  margin: 2rem auto;
+  background: rgba(255,255,255,0.92);
+  border-radius: 18px;
+  box-shadow: 0 6px 32px rgba(80, 112, 255, 0.10);
+  padding: 2.5rem 2rem 2rem 2rem;
+  backdrop-filter: blur(2px);
+  position: relative;
+  overflow: hidden;
+}
+
+main::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('https://pngimg.com/d/diary_PNG19116.png') no-repeat right 2rem bottom 1rem, url('https://pngimg.com/d/feather_PNG12985.png') no-repeat left 2rem top 1rem;
+  background-size: 120px auto, 80px auto;
+  opacity: 0.13;
+  pointer-events: none;
+  z-index: 1;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #6366f1 0%, #06b6d4 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(80,112,255,0.08);
+  z-index: 2;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+}
+
+h1::before {
+  content: url('https://cdn-icons-png.flaticon.com/128/1828/1828884.png');
+  width: 36px;
+  height: 36px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+h1::after {
+  content: url('https://cdn-icons-png.flaticon.com/128/1828/1828919.png');
+  width: 36px;
+  height: 36px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.filters {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin: 1.5rem 0 0.5rem 0;
+  z-index: 2;
+  position: relative;
+}
+.filters label {
+  font-weight: 600;
+  color: #6366f1;
+}
+.filters input, .filters select {
+  margin-left: 0.5rem;
+  padding: 0.4rem 0.7rem;
+  border-radius: 8px;
+  border: 1px solid #c7d2fe;
+  background: #f1f5f9;
+  font-size: 1rem;
+}
+.filters button {
+  background: #06b6d4;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.filters button:hover {
+  background: #0ea5e9;
+}
+
+.summary {
+  max-width: 600px;
+  margin: 0 auto 1.5rem auto;
+  background: rgba(243,244,246,0.95);
+  border-radius: 12px;
+  padding: 1.2rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(80, 112, 255, 0.04);
+  z-index: 2;
+  position: relative;
+}
+.mood-stats {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+}

@@ -1,0 +1,22 @@
+<form (ngSubmit)="onSubmit()" *ngIf="!submitted">
+  <label>Date:
+    <input type="date" [(ngModel)]="entry.date" name="date" required />
+  </label>
+  <label>Time:
+    <input type="time" [(ngModel)]="entry.time" name="time" required />
+  </label>
+  <label>Mood:
+    <select [(ngModel)]="entry.mood" name="mood" required>
+      <option *ngFor="let mood of moods" [value]="mood">{{ mood }}</option>
+    </select>
+  </label>
+  <label>Journal:
+    <textarea [(ngModel)]="entry.text" name="text" required></textarea>
+  </label>
+  <button type="submit">Add Entry</button>
+</form>
+<div *ngIf="submitted">
+  <h3>Entry Added!</h3>
+  <pre>{{ entry | json }}</pre>
+  <button (click)="submitted = false">Add Another</button>
+</div>
